@@ -1,6 +1,6 @@
 ---                           
 import '../styles/global.css' 
-const { title = "Aurum" } = Astro.props;
+const { title = "Aurum", style } = Astro.props;
 import Navbar from "../components/layout/Navbar.astro";
 import Footer from "../components/layout/Footer.astro";
 --- 
@@ -12,7 +12,7 @@ import Footer from "../components/layout/Footer.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
   </head>
-  <body class="bg-lion text-white font-sans">
+  <body class=`bg-gunmetal text-white font-sans ${Astro.props.class ?? ''}` style={style}>
     <Navbar />
     <main class="max-w-7xl mx-auto px-6 py-12">
       <slot />
