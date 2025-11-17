@@ -7,13 +7,22 @@
     --color-dark: #232727;
     --font-title: "Cormorant Garamond", "serif";
     --font-body: "Montserrat", "sans-serif";
+    --text-hero: 6rem;
     --text-title: 2.5rem;
     --text-subtitle: 1.5rem;
+    --text-button: 1.2rem;
     --text-body: 1rem;
     --text-small: 0.8rem;
 }
 
 @layer utilities {
+    .t-hero {
+        font-family: var(--font-title);
+        font-size: var(--text-hero);
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--color-lion);
+    }
     .t-title {
         font-family: var(--font-title);
         font-size: var(--text-title);
@@ -55,4 +64,11 @@
         font-weight: 700;
         line-height: 1.3;
     }
+
+   .t-button {
+        font-family: var(--font-title);
+        font-size: var(--text-button);
+        font-weight: 700;
+        line-height: 1.5;
+   }
 }

@@ -1,10 +1,63 @@
 ---
+import { Icon } from "lucide-react";
+import Button from "../components/ui/Button";
 import Layout from "../layouts/Layout.astro";
+import { HOME_FEATURES } from "../lib/constants";
+import { ROUTES } from "../lib/routes";
 ---
 <Layout 
-  title="Aurum - Home" 
-  class="h-screen w-full bg-cover bg-center"
-  style="background-image: url('images/hero/food-1.jpg')"
+  title="Aurum - Home"
+  style={`background-image: linear-gradient(rgba(22,44,41,0.4), rgba(22,44,41,0.4)), url('images/hero/food-1.jpg'); background-size: cover; background-position: center; background-attachment: fixed;`}
 >
-HOME
+  <section class="bg-dark/50 flex flex-col items-center justify-center text-center px-6 py-52 md:px-12 gap-6">
+    <p class="t-subtitle text-lion flex items-center justify-center gap-4">
+      <span class="block w-16 h-0.5 bg-lion"></span>
+      ELEGANCE CULINARY
+      <span class="block w-16 h-0.5 bg-lion"></span>
+    </p>
+    <h1 class="t-hero">AURUM</h1>
+    <h3 class="t-subtitle">High-End Culinary Experience</h3>
+    <p class="max-w-2xl">
+      Each dish is a masterpiece of flavor, presentation, and culinary craftsmanship. Discover excellence in our refined menu.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 mt-6">
+      <Button href={ROUTES.MENU}>View Menu</Button>
+      <Button href={ROUTES.RESERVATIONS} style="secondary">Make a Reservation</Button>
+    </div>
+  </section>
+  <section class="bg-gunmetal/80 flex flex-col items-center text-center px-6 py-32 md:px-12 gap-12 w-full">
+    <h2 class="t-title text-lion">Welcome to Aurum</h2>
+    <div class="flex items-center justify-center gap-4">
+      <span class="block w-16 h-0.5 bg-lion"></span>
+      <span class="block w-2 h-2 bg-lion rounded-full"></span>
+      <span class="block w-16 h-0.5 bg-lion"></span>
+    </div>
+    <ul class="flex flex-wrap justify-center gap-12 mt-8">
+      {HOME_FEATURES.map(({ icon: Icon, title, description }) => (
+        <li class="flex flex-col items-center gap-4 max-w-xs text-center">
+          <div class="border border-lion rounded-full p-6 flex items-center justify-center">
+            <Icon className="w-8 h-8 text-lion" />
+          </div>
+          <h4 class="t-subtitle">{title}</h4>
+          <p>{description}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+  <section class="bg-dark/50 flex flex-col items-center text-center px-6 py-32 md:px-12 gap-6 w-full">
+    <p class="t-subtitle text-lion flex items-center justify-center gap-4">
+      <span class="block w-16 h-0.5 bg-lion"></span>
+      PLAN YOUR EXPERIENCE
+      <span class="block w-16 h-0.5 bg-lion"></span>
+    </p>
+    <h2 class="t-title text-lion mt-4">Reserve Your Experience</h2>
+    <p class="max-w-2xl mt-4">
+      Plan your next exceptional dinner at Aurum. Our team is dedicated to creating unforgettable moments.
+    </p>
+    <div class="mt-6">
+      <Button href={ROUTES.RESERVATIONS} style="primary">Reserve Now</Button>
+    </div>
+  </section>
 </Layout>
+
+
