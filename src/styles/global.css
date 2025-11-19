@@ -8,7 +8,7 @@
     --font-title: "Cormorant Garamond", "serif";
     --font-body: "Montserrat", "sans-serif";
     --text-hero: 6rem;
-    --text-title: 2.5rem;
+    --text-title: 3rem;
     --text-subtitle: 1.5rem;
     --text-button: 1.2rem;
     --text-body: 1rem;
@@ -71,4 +71,19 @@
         font-weight: 700;
         line-height: 1.5;
    }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease-out forwards;
 }

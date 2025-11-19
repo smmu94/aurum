@@ -1,8 +1,16 @@
 ---
+import ReservationForm from "../components/form/ReservationForm";
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout 
   title="Aurum - Reservations"
+  style={`background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('/images/menu/white.jpg'); background-size: cover; background-position: center; background-attachment: fixed;`}
 >
-RESERVATIONS
+  <section class="bg-gunmetal px-6 py-24 flex flex-col items-center text-center gap-4">
+    <h1 class="t-title text-lion">Aurum Reservations</h1>
+    <p class="t-subtitle text-white">Book your table and create unforgettable moments</p>
+  </section>
+  <section class="p-8 flex flex-col max-w-2xl mx-auto">
+    <ReservationForm client:load />
+  </section>
 </Layout>

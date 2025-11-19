@@ -1,8 +1,30 @@
 ---
+import Button from "../components/ui/Button";
+import LocationCard from "../components/ui/LocationCard";
 import Layout from "../layouts/Layout.astro";
+import { LOCATIONS } from "../lib/constants/locations";
+import { ROUTES } from "../lib/routes";
 ---
 <Layout 
   title="Aurum - Locations"
+  style={`background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('/images/menu/white.jpg'); background-size: cover; background-position: center; background-attachment: fixed;`}
 >
-LOCATIONS
+  <section class="bg-gunmetal px-6 py-24 flex flex-col items-center text-center gap-4">
+    <h1 class="t-title text-lion">Aurum Locations</h1>
+    <p class="t-subtitle text-white">Visit us at any of our strategically located branches</p>
+  </section>
+  <section class="p-6">
+    {LOCATIONS.map((location) =>(
+      <LocationCard {...location} />
+    ))}
+  </section>
+  <section class="bg-dark p-8">
+    <div class="bg-white p-6 rounded-lg flex flex-col gap-4 border-l-lion border-4 max-w-5xl w-full mx-auto">
+      <h3 class="t-subtitle text-gunmetal">Need to Reserve a Table?</h3>
+      <p class="t-small text-gunmetal">
+        All our locations accept reservations. You can call the branch of your choice directly or use our online reservation system for greater convenience.
+      </p>
+      <div><Button link={{ href: ROUTES.RESERVATIONS }} style="primary">Reserve Now</Button></div>
+    </div>
+  </section>
 </Layout>

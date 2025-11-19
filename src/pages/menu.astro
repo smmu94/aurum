@@ -1,8 +1,16 @@
 ---
+import MenuWrapper from "../components/ui/MenuWrapper";
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout 
   title="Aurum - Menu"
+  style={`background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('/images/menu/white.jpg'); background-size: cover; background-position: center; background-attachment: fixed;`}
 >
-MENU
+  <section class="bg-gunmetal px-6 py-24 flex flex-col items-center justify-center text-center gap-4">
+    <h1 class="t-title text-lion">Aurum Menu</h1>
+    <p class="t-subtitle text-white">
+      Discover our carefully curated selection of dishes prepared with premium ingredients
+    </p>
+  </section>
+  <MenuWrapper client:load />
 </Layout>

@@ -1,8 +1,69 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { AURUM_TEAM, AURUM_VALUES } from "../lib/constants/about";
 ---
+
 <Layout 
   title="Aurum - About"
+  style={`background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('/images/menu/white.jpg'); background-size: cover; background-position: center; background-attachment: fixed;`}
 >
-ABOUT
+  <section class="bg-gunmetal px-6 py-24 flex flex-col items-center text-center gap-4">
+    <h1 class="t-title text-lion">About Us</h1>
+    <p class="t-subtitle text-white">The story and philosophy behind Aurum</p>
+  </section>
+  <section class="text-gunmetal px-6 py-16 flex flex-col gap-10 items-center">
+    <h3 class="t-subtitle text-gunmetal flex items-center justify-center gap-4">
+      <span class="block w-16 h-0.5 bg-lion"></span>
+        Our Philosophy
+      <span class="block w-16 h-0.5 bg-lion"></span>
+    </h3>
+    <div class="flex flex-col gap-6 t-body max-w-3xl text-center md:text-left">
+      <p>Aurum is not just a restaurant; it is a sanctuary of culinary excellence where tradition meets innovation. Our name, meaning “gold” in Latin, reflects our commitment to value and exceptional quality in every aspect of our operation.</p>
+      <p>We believe gastronomy is an art that transcends the simple act of eating. It is a dialogue between the chef, the ingredients, and the guest, where every element must be perfect. Each dish we serve is the result of meticulous research, careful selection of premium ingredients, and refined culinary techniques.</p>
+      <p>Our team is committed to creating unforgettable moments. From the welcome to the last sip of coffee, every detail is thoughtfully orchestrated to deliver an experience that resonates with our guests long after they leave.</p>
+    </div>
+  </section>
+  <section class="bg-white px-6 py-16 flex justify-center items-center">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center w-full max-w-6xl mx-auto">
+      {AURUM_VALUES.map(({ icon: Icon, title, description }) => (
+        <li class="flex flex-col items-center text-center p-6 rounded-xl border border-lion/20 w-full max-w-xs">
+          <div class="border border-lion bg-lion/20 rounded-full p-3 mb-4 flex items-center justify-center">
+            <Icon className="w-6 h-6 text-lion" />
+          </div>
+          <h4 class="t-body-bold text-gunmetal mb-2">{title}</h4>
+          <p class="t-small text-gunmetal">{description}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+  <section class="bg-gunmetal text-white px-6 py-20 flex flex-col gap-12 items-center">
+    <div class="flex flex-col gap-2 text-center max-w-xl">
+      <h3 class="t-subtitle text-lion">Our Team</h3>
+      <p>The exceptional talent behind the magic of Aurum</p>
+    </div>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center w-full max-w-6xl mx-auto">
+      {AURUM_TEAM.map(({ icon: Icon, title, role, description }) => (
+        <li class="flex flex-col items-center gap-4 p-8 bg-white text-gunmetal rounded-xl">
+          <div class="border border-lion bg-lion/20 rounded-full p-3">
+            <Icon className="w-6 h-6 text-lion" />
+          </div>
+          <h4 class="t-body-bold">{title}</h4>
+          <p class="t-small-bold text-lion">{role}</p>
+          <p class="t-small text-center">{description}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+  <section class="text-gunmetal px-6 py-16 flex flex-col gap-10 items-center">
+    <h3 class="t-subtitle text-gunmetal flex items-center justify-center gap-4">
+      <span class="block w-16 h-0.5 bg-lion"></span>
+        Our History
+      <span class="block w-16 h-0.5 bg-lion"></span>
+    </h3>
+    <div class="flex flex-col gap-6 t-body max-w-3xl text-center md:text-left">
+      <p>Aurum was born from a shared vision: to create a place where world-class gastronomy meets human warmth. Founded more than a decade ago, we have grown organically, building our name through reputation and word-of-mouth from satisfied guests.</p>
+      <p>Throughout the years, we have had the honor of serving distinguished individuals, celebrating special moments with countless families, and earning recognition in prestigious culinary guides. But for us, true success is measured in the smiles of satisfied guests and the loyalty of those who return again and again.</p>
+      <p>Today, Aurum continues to evolve, exploring new culinary techniques while honoring classical traditions. Our commitment remains unwavering: to offer a dining experience that is simply unmatched.</p>
+    </div>
+  </section>
 </Layout>

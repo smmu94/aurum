@@ -3,7 +3,7 @@ import Logo from "../../../public/logo.svg";
 import { MENU_ITEMS, ROUTES } from "../../lib/routes";
 import MenuButton from "../ui/MenuButton";
 ---
-<header class="flex items-center justify-between px-6 py-4 relative bg-gunmetal">
+<header class="flex items-center justify-between px-6 py-4 relative bg-gunmetal border-b border-lion">
   <a href={ROUTES.HOME}>
     <img src={Logo.src} 
          alt="Aurum Logo" 
@@ -22,7 +22,7 @@ import MenuButton from "../ui/MenuButton";
     {MENU_ITEMS.map(item => (
       <a
         href={item.path}
-        class="relative text-light text-center inline-block hover:text-lion"
+        class="relative text-light text-center inline-block hover:text-lion t-button"
       >
         {item.name}
       </a>

@@ -1,8 +1,14 @@
 ---
+import GalleryWrapper from "../components/ui/GalleryWrapper";
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout 
   title="Aurum - Gallery"
+  style={`background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url('/images/menu/white.jpg'); background-size: cover; background-position: center; background-attachment: fixed;`}
 >
-GALLERY
+  <section class="bg-gunmetal px-6 py-24 flex flex-col items-center text-center gap-4">
+    <h1 class="t-title text-lion">Galería Aurum</h1>
+    <p class="t-subtitle text-white">Descubre la belleza de nuestros platos y ambiente</p>
+  </section>
+  <GalleryWrapper client:load />
 </Layout>
