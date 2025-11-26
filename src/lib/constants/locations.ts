@@ -3,7 +3,7 @@ import type { LocationCardProps } from "../../types/locations";
 export const LOCATIONS: LocationCardProps[] = [
     {
         image: {
-            url: "images/locations/location-1.jpg",
+            url: "public/images/locations/location-1.jpg",
             isLeft: true
         },
         title: "Aurum Downtown",
@@ -14,7 +14,7 @@ export const LOCATIONS: LocationCardProps[] = [
     },
     {
         image: {
-            url: "images/locations/location-2.jpg",
+            url: "public/images/locations/location-2.jpg",
             isLeft: false
         },
         title: "Aurum Riverside",
@@ -25,7 +25,7 @@ export const LOCATIONS: LocationCardProps[] = [
     },
     {
         image: {
-            url: "images/locations/location-3.jpg",
+            url: "public/images/locations/location-3.jpg",
             isLeft: true
         },
         title: "Aurum Uptown",
