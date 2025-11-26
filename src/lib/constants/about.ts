@@ -1,55 +1,56 @@
-import { FaMedal, FaHeart, FaPeopleCarry } from "react-icons/fa"
-import { GiCook } from "react-icons/gi"
+import { FaMedal, FaHeart, FaPeopleCarry } from "react-icons/fa";
+import { GiCook } from "react-icons/gi";
+
 export const AURUM_VALUES: Array<{
-  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
-  title: string
-  description: string
+  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
 }> = [
   {
     icon: FaMedal,
-    title: "Excelencia",
+    title: "Excellence",
     description:
-      "Buscamos la perfección en cada detalle, desde la selección de ingredientes hasta la presentación final.",
+      "We strive for perfection in every detail, from ingredient selection to the final presentation.",
   },
   {
     icon: FaHeart,
-    title: "Pasion",
+    title: "Passion",
     description:
-      "Amamos lo que hacemos y eso se refleja en cada plato y en la calidez de nuestro servicio.",
+      "We love what we do, and that is reflected in every dish and the warmth of our service.",
   },
   {
     icon: FaPeopleCarry,
-    title: "Comunidad",
+    title: "Community",
     description:
-      "Creemos en construir relaciones duraderas con nuestros clientes y proveedores.",
+      "We believe in building lasting relationships with our customers and suppliers.",
   },
-]
+];
 
 export const AURUM_TEAM: Array<{
-  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
-  title: string
-  role: string
-  description: string
+  icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  role: string;
+  description: string;
 }> = [
   {
     icon: GiCook,
     title: "Chef Marco Rossi",
-    role: "Chef Ejecutivo",
+    role: "Executive Chef",
     description:
-      "Con más de 25 años de experiencia en la cocina gourmet internacional, Marco ha perfeccionado su arte en los mejores restaurantes de Italia, Francia y España.",
+      "With over 25 years of experience in international gourmet cuisine, Marco has perfected his craft in the finest restaurants of Italy, France, and Spain.",
   },
   {
     icon: GiCook,
     title: "Elena García",
-    role: "Sommelier Principal",
+    role: "Head Sommelier",
     description:
-      "Experta en vinos con certificación internacional, Elena cura personalmente nuestra selección de vinos premium de todo el mundo.",
+      "An internationally certified wine expert, Elena personally curates our premium wine selection from around the world.",
   },
   {
     icon: GiCook,
     title: "David López",
-    role: "Director de Operaciones",
+    role: "Operations Director",
     description:
-      "Dedicado a crear una experiencia excepcional, David lidera nuestro equipo con pasión y atención al detalle en cada servicio.",
+      "Dedicated to creating an exceptional experience, David leads our team with passion and attention to detail in every service.",
   },
-]
+];
